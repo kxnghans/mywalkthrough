@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { CloseIcon } from "../icons/Icons";
+import { FaCirclePlay } from "react-icons/fa6";
 
 const ProjectModal = ({ project, onClose }) => {
   const modalRef = useRef();
@@ -84,9 +85,10 @@ const ProjectModal = ({ project, onClose }) => {
               href={project.liveLink || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className="bevel-button-dark transform rounded-lg bg-red-600 px-4 py-2 font-bold text-white transition-all duration-200 hover:bg-red-700"
+              className="bevel-button-dark flex items-center space-x-2 transform rounded-lg bg-red-600 px-4 py-2 font-bold text-white transition-all duration-200 hover:bg-red-700"
             >
-              Live Project
+              <FaCirclePlay />
+              <span>Demo</span>
             </a>
             <a
               href={project.codeLink || "#"}
@@ -94,7 +96,7 @@ const ProjectModal = ({ project, onClose }) => {
               rel="noopener noreferrer"
               className="bevel-button-dark transform rounded-lg bg-gray-700 px-4 py-2 font-bold text-white transition-all duration-200 hover:bg-gray-800"
             >
-              Code Repository
+              View Project
             </a>
           </div>
         </div>
